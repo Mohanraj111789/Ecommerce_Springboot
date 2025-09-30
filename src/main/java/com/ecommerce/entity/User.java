@@ -22,29 +22,4 @@ public class User {
     @Column(unique = true,nullable = false)
     private String username;
 
-    @NotBlank(message = "Password is mandatory")
-    @Size(min = 6,max = 100, message = "Password must be between 6 and 100 characters")
-    private String password;
-
-    @NotBlank(message = "Email is mandatory")
-    @Email(message = "Email is not valid")
-    @Column(unique = true,nullable = false)
-    private String email;
-
-    @NotNull(message = "Role is mandatory")
-    @Column(nullable = false)
-    private String role;
-
-    @NotNull(message = "Status is mandatory")
-    @Column(nullable = false)
-    private String status;
-
-    @NotNull(message = "Created At is mandatory")
-    @Column(nullable = false)
-    private LocalDateTime createdAt;
-
-    @NotNull(message = "Updated At is mandatory")
-    @Column(nullable = false)
-    private LocalDateTime updatedAt;
-
 }
